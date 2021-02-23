@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     canvasEl.height = 500;
     const ctx = canvasEl.getContext('2d');
 
-    // let options = { 'pos': [30, 30], 'vel': [10, 10], 'radius': 5, 'color': '#00FF00' };
-    // mObj = new MovingObject(options);
+    let options = { 'pos': [30, 30], 'vel': [10, 10], 'radius': 5, 'color': '#00FF00' };
+    mObj = new MovingObject(options);
 
-    // mObj.draw(ctx);
-    // mObj.move();
-    // mObj.draw(ctx);
+    mObj.draw(ctx);
+    mObj.move();
+    mObj.draw(ctx);
 
     Util.inherits(Asteroid, MovingObject);
 
-    ast = new Asteroid([30,30]);
+    ast = new Asteroid({pos: [450,450]});
     ast.draw(ctx);
     ast.move();
     ast.draw(ctx);
