@@ -1,4 +1,5 @@
 function MovingObject(options) {
+    console.log(this)
     this.pos = options['pos']
     this.vel = options['vel']
     this.radius = options['radius']
@@ -19,5 +20,7 @@ MovingObject.prototype.move = function() {
     this.pos[1] += this.vel[1];
     
 }
+ 
+
 
 module.exports = MovingObject;
